@@ -1,0 +1,32 @@
+:root { /*Variaveis*/
+    --title-color:#322153;
+    --primary-color: #34cb79;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*Para evitar problemas
+    com o padding, não ultrapassando o tamanho da
+    caixa*/
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: #dedee2;
+    -webkit-font-smoothing: antialised;
+}
+a{text-decoration: none;}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+}
+
+header {
+    display: flex; /* Posicionamento */
+    align-items: center;
+    justify-content: space-between;
+}
