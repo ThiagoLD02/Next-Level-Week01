@@ -4,7 +4,7 @@ function populateUFs(){
     const ufSelect = document.querySelector("select[name=uf]")
 
     fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
-    .then( res => res.json() ) //function nome(res){return res.json()}
+    .then( res => res.json() ) 
     .then( states => {
 
         
@@ -29,7 +29,7 @@ function getCities(event){
 
     stateInput.value = event.target.options[indexOfSelectedState].text
 
-    // console.log(event.target.value) Bom para testar se o select esta correto
+    
 
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`
 
@@ -38,7 +38,7 @@ function getCities(event){
 
 
     fetch(url)
-    .then( res => res.json() ) //function nome(res){return res.json()}
+    .then( res => res.json() ) 
     .then( cities => {
 
         
@@ -52,7 +52,7 @@ function getCities(event){
 }
 
 document
-    .querySelector("select[name=uf]") //Buscar um campo na página
+    .querySelector("select[name=uf]") 
     .addEventListener("change",getCities)
 
 // Itens de coleta
@@ -81,8 +81,7 @@ function handleSelectedItem(event){
         return itemFound
 
     } )
-    // Ou podemos fazer uma arrow function
-    // const alreadySelected = selectedItems.findIndex( item => item == itemId )
+    
 
     // Se ja estiver selecionado
     if( alreadySelected >=0 ){
